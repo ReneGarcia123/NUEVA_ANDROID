@@ -11,6 +11,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -62,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
+
+
     }
 
     protected void Registrar_Usuario(){
@@ -75,6 +80,18 @@ public class MainActivity extends AppCompatActivity {
         if (TextUtils.isEmpty(PASSWORD)){
             Toast.makeText(this,"Ingrese su contraseña",Toast.LENGTH_SHORT).show();
         }
+        mAuth.createUserWithEmailAndPassword(E_MAIL,PASSWORD).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+                    Toast.makeText(MainActivity.this,"Usuario registrado", Toast.LENGTH_SHORT).show();
+
+                }
+                else{
+                    Toast.makeText(MainActivity.this,"No se puede registrar",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
     }
 
@@ -91,5 +108,7 @@ public class MainActivity extends AppCompatActivity {
             mAuth.removeAuthStateListener(mAuthListener);
         }
     }
+
+
 
 }
