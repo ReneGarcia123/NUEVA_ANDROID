@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "628067918146",
+    "firebase_url": "https://rene-a8ffc.firebaseio.com",
+    "project_id": "rene-a8ffc",
+    "storage_bucket": "rene-a8ffc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628067918146:android:13c3c6a65bcbec53",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628067918146-3grts5er245asojtbi1lnn2g588bbbce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLDbhOf2pXlXazPT6QkcSCpUfNmacC5kw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628067918146-3grts5er245asojtbi1lnn2g588bbbce.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
